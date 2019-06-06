@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GESTOR_DE_ACTIVIDADESModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ACTIVITY">
+    <Key>
+      <PropertyRef Name="act_code" />
+    </Key>
+    <Property Name="act_code" Type="int" Nullable="false" />
+    <Property Name="act_description" Type="varchar" MaxLength="400" />
+    <Property Name="act_date_delivery" Type="date" />
+  </EntityType>
+  <EntityType Name="PROJECT">
+    <Key>
+      <PropertyRef Name="pro_ncode" />
+    </Key>
+    <Property Name="pro_ncode" Type="int" Nullable="false" />
+    <Property Name="pro_name" Type="varchar" MaxLength="20" />
+    <Property Name="pro_initial_Date" Type="date" />
+    <Property Name="pro_final_Date" Type="date" />
+    <Property Name="tpr_ncode" Type="int" />
+  </EntityType>
+  <EntityType Name="ROLES">
+    <Key>
+      <PropertyRef Name="rol_code" />
+    </Key>
+    <Property Name="rol_code" Type="int" Nullable="false" />
+    <Property Name="rol_name" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TEAM_PROJECT">
+    <Key>
+      <PropertyRef Name="tpr_ncode" />
+    </Key>
+    <Property Name="tpr_ncode" Type="int" Nullable="false" />
+    <Property Name="tpr_name" Type="varchar" MaxLength="20" />
+    <Property Name="wok_code" Type="int" />
+    <Property Name="act_code" Type="int" />
+  </EntityType>
+  <EntityType Name="WORKERS">
+    <Key>
+      <PropertyRef Name="wok_code" />
+    </Key>
+    <Property Name="wok_code" Type="int" Nullable="false" />
+    <Property Name="wok_name" Type="varchar" MaxLength="20" />
+    <Property Name="rol_code" Type="int" />
+  </EntityType>
+  <Association Name="FK__PROJECT__tpr_nco__1B0907CE">
+    <End Role="TEAM_PROJECT" Type="Self.TEAM_PROJECT" Multiplicity="0..1" />
+    <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEAM_PROJECT">
+        <PropertyRef Name="tpr_ncode" />
+      </Principal>
+      <Dependent Role="PROJECT">
+        <PropertyRef Name="tpr_ncode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TEAM_PROJ__act_c__182C9B23">
+    <End Role="ACTIVITY" Type="Self.ACTIVITY" Multiplicity="0..1" />
+    <End Role="TEAM_PROJECT" Type="Self.TEAM_PROJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACTIVITY">
+        <PropertyRef Name="act_code" />
+      </Principal>
+      <Dependent Role="TEAM_PROJECT">
+        <PropertyRef Name="act_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TEAM_PROJ__wok_c__173876EA">
+    <End Role="WORKERS" Type="Self.WORKERS" Multiplicity="0..1" />
+    <End Role="TEAM_PROJECT" Type="Self.TEAM_PROJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WORKERS">
+        <PropertyRef Name="wok_code" />
+      </Principal>
+      <Dependent Role="TEAM_PROJECT">
+        <PropertyRef Name="wok_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WORKERS__rol_cod__1273C1CD">
+    <End Role="ROLES" Type="Self.ROLES" Multiplicity="0..1" />
+    <End Role="WORKERS" Type="Self.WORKERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="rol_code" />
+      </Principal>
+      <Dependent Role="WORKERS">
+        <PropertyRef Name="rol_code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GESTOR_DE_ACTIVIDADESModelStoreContainer">
+    <EntitySet Name="ACTIVITY" EntityType="Self.ACTIVITY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROJECT" EntityType="Self.PROJECT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROLES" EntityType="Self.ROLES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TEAM_PROJECT" EntityType="Self.TEAM_PROJECT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WORKERS" EntityType="Self.WORKERS" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__PROJECT__tpr_nco__1B0907CE" Association="Self.FK__PROJECT__tpr_nco__1B0907CE">
+      <End Role="TEAM_PROJECT" EntitySet="TEAM_PROJECT" />
+      <End Role="PROJECT" EntitySet="PROJECT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TEAM_PROJ__act_c__182C9B23" Association="Self.FK__TEAM_PROJ__act_c__182C9B23">
+      <End Role="ACTIVITY" EntitySet="ACTIVITY" />
+      <End Role="TEAM_PROJECT" EntitySet="TEAM_PROJECT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TEAM_PROJ__wok_c__173876EA" Association="Self.FK__TEAM_PROJ__wok_c__173876EA">
+      <End Role="WORKERS" EntitySet="WORKERS" />
+      <End Role="TEAM_PROJECT" EntitySet="TEAM_PROJECT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WORKERS__rol_cod__1273C1CD" Association="Self.FK__WORKERS__rol_cod__1273C1CD">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="WORKERS" EntitySet="WORKERS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

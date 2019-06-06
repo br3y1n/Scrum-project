@@ -1,0 +1,45 @@
+﻿@model IEnumerable<GestorDeActividades.Models.TEAM_PROJECT>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Actividad asignada
+        </th>
+        <th>
+            Encargado
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tpr_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACTIVITY.act_description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WORKERS.wok_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.tpr_ncode }) |
+            @Html.ActionLink("Details", "Details", new { id=item.tpr_ncode }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.tpr_ncode })
+        </td>
+    </tr>
+}
+
+</table>

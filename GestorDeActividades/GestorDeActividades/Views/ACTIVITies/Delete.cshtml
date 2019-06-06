@@ -1,0 +1,40 @@
+﻿@model GestorDeActividades.Models.ACTIVITY
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>¿Está seguro de eliminar esta actividad?</h3>
+<div>
+    <h4>ACTIVIDADES</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Actividad
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.act_description)
+        </dd>
+
+        <dt>
+            Fecha de Entrega
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.act_date_delivery)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

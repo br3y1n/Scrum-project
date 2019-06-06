@@ -1,0 +1,34 @@
+﻿@model GestorDeActividades.Models.ACTIVITY
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ACTIVIDADES</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Actividad
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.act_description)
+        </dd>
+
+        <dt>
+            Fecha de entrega
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.act_date_delivery)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.act_code }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

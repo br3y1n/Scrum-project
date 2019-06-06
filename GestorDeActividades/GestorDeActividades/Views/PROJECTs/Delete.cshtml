@@ -1,0 +1,56 @@
+﻿@model GestorDeActividades.Models.PROJECT
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PROJECT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_initial_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_initial_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_final_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_final_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TEAM_PROJECT.tpr_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEAM_PROJECT.tpr_name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

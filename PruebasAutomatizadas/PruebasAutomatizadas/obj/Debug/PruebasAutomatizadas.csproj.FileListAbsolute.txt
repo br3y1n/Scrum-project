@@ -1,0 +1,12 @@
+C:\Users\rauld\source\repos\PruebasAutomatizadas\PruebasAutomatizadas\bin\Debug\PruebasAutomatizadas.exe.config
+C:\Users\rauld\source\repos\PruebasAutomatizadas\PruebasAutomatizadas\bin\Debug\PruebasAutomatizadas.exe
+C:\Users\rauld\source\repos\PruebasAutomatizadas\PruebasAutomatizadas\bin\Debug\PruebasAutomatizadas.pdb
+C:\Users\rauld\source\repos\PruebasAutomatizadas\PruebasAutomatizadas\bin\Debug\WebDriver.dll
+C:\Users\rauld\source\repos\PruebasAutomatizadas\PruebasAutomatizadas\bin\Debug\WebDriver.Support.dll
+C:\Users\rauld\source\repos\PruebasAutomatizadas\PruebasAutomatizadas\bin\Debug\WebDriver.xml
+C:\Users\rauld\source\repos\PruebasAutomatizadas\PruebasAutomatizadas\bin\Debug\WebDriver.Support.xml
+C:\Users\rauld\source\repos\PruebasAutomatizadas\PruebasAutomatizadas\obj\Debug\PruebasAutomatizadas.csprojResolveAssemblyReference.cache
+C:\Users\rauld\source\repos\PruebasAutomatizadas\PruebasAutomatizadas\obj\Debug\PruebasAutomatizadas.csproj.CoreCompileInputs.cache
+C:\Users\rauld\source\repos\PruebasAutomatizadas\PruebasAutomatizadas\obj\Debug\PruebasAutomatizadas.csproj.CopyComplete
+C:\Users\rauld\source\repos\PruebasAutomatizadas\PruebasAutomatizadas\obj\Debug\PruebasAutomatizadas.exe
+C:\Users\rauld\source\repos\PruebasAutomatizadas\PruebasAutomatizadas\obj\Debug\PruebasAutomatizadas.pdb

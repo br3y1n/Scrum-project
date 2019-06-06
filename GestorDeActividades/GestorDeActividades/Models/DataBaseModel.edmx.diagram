@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f67a5c0cf04c480c954def8ecaa89987" Name="Diagram1">
+        <EntityTypeShape EntityType="GESTOR_DE_ACTIVIDADESModel.ACTIVITY" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESTOR_DE_ACTIVIDADESModel.PROJECT" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESTOR_DE_ACTIVIDADESModel.ROLES" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESTOR_DE_ACTIVIDADESModel.TEAM_PROJECT" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="GESTOR_DE_ACTIVIDADESModel.WORKERS" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="GESTOR_DE_ACTIVIDADESModel.FK__TEAM_PROJ__act_c__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="GESTOR_DE_ACTIVIDADESModel.FK__PROJECT__tpr_nco__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="GESTOR_DE_ACTIVIDADESModel.FK__WORKERS__rol_cod__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="GESTOR_DE_ACTIVIDADESModel.FK__TEAM_PROJ__wok_c__173876EA" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

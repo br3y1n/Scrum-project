@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GESTOR_DE_ACTIVIDADESModelStoreContainer" CdmEntityContainer="GESTOR_DE_ACTIVIDADESEntities">
+    <EntitySetMapping Name="ACTIVITY">
+      <EntityTypeMapping TypeName="GESTOR_DE_ACTIVIDADESModel.ACTIVITY">
+        <MappingFragment StoreEntitySet="ACTIVITY">
+          <ScalarProperty Name="act_code" ColumnName="act_code" />
+          <ScalarProperty Name="act_description" ColumnName="act_description" />
+          <ScalarProperty Name="act_date_delivery" ColumnName="act_date_delivery" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROJECT">
+      <EntityTypeMapping TypeName="GESTOR_DE_ACTIVIDADESModel.PROJECT">
+        <MappingFragment StoreEntitySet="PROJECT">
+          <ScalarProperty Name="pro_ncode" ColumnName="pro_ncode" />
+          <ScalarProperty Name="pro_name" ColumnName="pro_name" />
+          <ScalarProperty Name="pro_initial_Date" ColumnName="pro_initial_Date" />
+          <ScalarProperty Name="pro_final_Date" ColumnName="pro_final_Date" />
+          <ScalarProperty Name="tpr_ncode" ColumnName="tpr_ncode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLES">
+      <EntityTypeMapping TypeName="GESTOR_DE_ACTIVIDADESModel.ROLES">
+        <MappingFragment StoreEntitySet="ROLES">
+          <ScalarProperty Name="rol_code" ColumnName="rol_code" />
+          <ScalarProperty Name="rol_name" ColumnName="rol_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEAM_PROJECT">
+      <EntityTypeMapping TypeName="GESTOR_DE_ACTIVIDADESModel.TEAM_PROJECT">
+        <MappingFragment StoreEntitySet="TEAM_PROJECT">
+          <ScalarProperty Name="tpr_ncode" ColumnName="tpr_ncode" />
+          <ScalarProperty Name="tpr_name" ColumnName="tpr_name" />
+          <ScalarProperty Name="wok_code" ColumnName="wok_code" />
+          <ScalarProperty Name="act_code" ColumnName="act_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WORKERS">
+      <EntityTypeMapping TypeName="GESTOR_DE_ACTIVIDADESModel.WORKERS">
+        <MappingFragment StoreEntitySet="WORKERS">
+          <ScalarProperty Name="wok_code" ColumnName="wok_code" />
+          <ScalarProperty Name="wok_name" ColumnName="wok_name" />
+          <ScalarProperty Name="rol_code" ColumnName="rol_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
